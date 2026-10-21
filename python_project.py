@@ -11,7 +11,19 @@ class Main:
         ]
 
         self.files = {
-            f"{self.name}/main.py" : "",
+            f"{self.name}/main.py" : """from core.modules.logging import *
+
+class Main:
+    def __init__(self):
+        pass
+
+    def main(self):
+        print("Hello World")
+
+if __name__ == "__main__":
+    main = Main()
+    main.main()
+            """,
             f"{self.name}/.gitignore" : """# Folders
 env
 __pycache__
